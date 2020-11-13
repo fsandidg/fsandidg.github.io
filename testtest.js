@@ -1,4 +1,4 @@
-<script>
+
 var myQuestions = [
 	{
 		question: "What is 10/2?",
@@ -97,4 +97,3 @@ var submitButton = document.getElementById('submit');
 generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
 
 
-</script>
