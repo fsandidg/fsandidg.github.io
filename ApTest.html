@@ -1,9 +1,22 @@
 <!DOCTYPE html>
-<script src="APHGTest.js"></script>
+<script>
+        const btn = document.querySelector('#btn');
+        // handle click button
+        btn.onclick = function () {
+            const rbs = document.querySelectorAll('input[name="choice"]');
+            let selectedValue;
+            for (const rb of rbs) {
+                if (rb.checked) {
+                    selectedValue = rb.value;
+                    break;
+                }
+            }
+            alert(selectedValue);
+        };
+    </script>
 <h1> APHG TEST</h1>
-  
+<h6> 1.) The demographic transition model states that stage 3 societies differ from stage 2 societies primarily in that...</h6>
   <form>
-    <h6> 1.) The demographic transition model states that stage 3 societies differ from stage 2 societies primarily in that...</h6>
   <label for="question-1">
     <input id="A1" type="radio" name="question-1">a stage 3 economy is agricultural, not manufacturing</label><br>
   <label for="question-1">
@@ -14,6 +27,7 @@
     <input id="D1"type="radio" name="question-1"> a stage 3 total population has leveled off</label><br>
   <label for="question-1">
     <input id="E1" type="radio" name="question-1"> a stage 3 gender imbalance has revalanced itself</label><br>
+        <input type="button" id="btn" value="Show Selected Value">
 </form>
 <br><br><br>
 <form>
